@@ -1,1 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");/*# sourceMappingURL=portfolio.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  min-width: 100vw;
+  min-height: 400px;
+  background-color: #28293e;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-navbar {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  height: 48px;
+  padding-top: 16px;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+.logo-box__text {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.nav {
+  flex-grow: 0.5;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+}
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.header-btn {
+  align-self: center;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  width: 138px;
+  height: 48px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.header-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-style: normal;
+}
+.header-content__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: rgba(255, 255, 255, 0.64);
+  width: 570px;
+  text-align: center;
+}
+.header-content__title {
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 111%;
+  letter-spacing: -0.03em;
+  color: #fff;
+}/*# sourceMappingURL=portfolio.css.map */

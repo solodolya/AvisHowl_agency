@@ -1,3 +1,89 @@
 @import "../vars";
 @import "../template";
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header {
+	min-width: 100vw;
+	min-height: 400px;
+	background-color: $bg-color-dark;
+	display: flex;
+	flex-direction: column;
+}
+
+.header-navbar {
+	color: $text-light;
+	display: flex;
+	justify-content: space-around;
+	height: 48px;
+	padding-top: 16px;
+}
+
+.logo-box {
+	display: flex;
+	align-items: center;
+	&__img {
+	}
+	&__text {
+		@include font;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 133%;
+	}
+}
+
+.nav {
+	flex-grow: 0.5;
+	@include font;
+	font-size: 16px;
+	line-height: 200%;
+
+	&__item {
+	}
+	&__link {
+		color: $text-light;
+		text-decoration: none;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		list-style: none;
+		height: 100%;
+	}
+}
+
+.header-btn {
+	align-self: center;
+	@include font;
+	@include button;
+}
+
+.header-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include font;
+	&__text {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 200%;
+		color: $text-light-gray;
+		width: 570px;
+		text-align: center;
+	}
+	&__title {
+		font-weight: 800;
+		font-size: 72px;
+		line-height: 111%;
+		letter-spacing: -0.03em;
+		color: $text-light;
+	}
+}

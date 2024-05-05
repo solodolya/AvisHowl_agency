@@ -3,3 +3,15 @@
 	font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
 	font-style: normal;
 }
+
+@mixin button {
+	font-weight: 900;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 6px;
+	width: 138px;
+	height: 48px;
+	background-color: transparent;
+	color: #fff;
+}
