@@ -8,8 +8,13 @@
 	box-sizing: border-box;
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
 .header {
-	min-width: 100vw;
+	min-width: 100%;
 	min-height: 400px;
 	background-color: $bg-color-dark;
 	display: flex;
@@ -22,26 +27,23 @@
 	justify-content: space-around;
 	height: 48px;
 	padding-top: 16px;
+	box-sizing: content-box;
 }
 
 .logo-box {
 	display: flex;
 	align-items: center;
+	column-gap: 15px;
 	&__img {
 	}
 	&__text {
-		@include font;
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 133%;
+		@extend %text-logo;
 	}
 }
 
 .nav {
 	flex-grow: 0.5;
-	@include font;
-	font-size: 16px;
-	line-height: 200%;
+	@extend %text-explanation;
 
 	&__item {
 	}
@@ -58,10 +60,34 @@
 	}
 }
 
-.header-btn {
+.form-button {
 	align-self: center;
-	@include font;
-	@include button;
+	&--position-start {
+		align-self: flex-start;
+	}
+	&__contact {
+		@include button;
+		&--light {
+			background-color: #fff;
+			width: 154px;
+			box-shadow: 0 3px 9px 0 rgba(57, 20, 0, 0.08);
+		}
+	}
+	&__load {
+		@include button;
+		background-color: #fff;
+		width: 170px;
+		box-shadow: 0 3px 9px 0 rgba(57, 20, 0, 0.08);
+	}
+	&__link {
+		text-decoration: none;
+		&--light {
+			color: $text-light;
+		}
+		&--dark {
+			color: $text-dark;
+		}
+	}
 }
 
 .header-content {
@@ -70,20 +96,152 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	@include font;
 	&__text {
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 200%;
+		@extend %text-explanation;
 		color: $text-light-gray;
 		width: 570px;
 		text-align: center;
 	}
 	&__title {
-		font-weight: 800;
-		font-size: 72px;
-		line-height: 111%;
-		letter-spacing: -0.03em;
+		@extend %text-h1;
 		color: $text-light;
+	}
+}
+
+.main {
+	flex-grow: 1;
+	background-color: $bg-color-light;
+	display: flex;
+	flex-direction: column;
+}
+.menu-filter {
+	display: flex;
+	@extend %text-explanation;
+	height: 40px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	column-gap: 45px;
+	margin-top: 68px;
+	margin-bottom: 68px;
+	&__link {
+		text-decoration: none;
+		color: $text-dark-gray;
+
+		&--active {
+			color: $text-dark;
+		}
+	}
+	&__index {
+		font-size: 14px;
+		line-height: 171%;
+		color: $text-dark-gray;
+	}
+}
+.gallery {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	margin: auto;
+	width: 90%;
+	gap: 30px;
+}
+.image-container1 {
+	background-image: url(/assets/images/portfolio/sofa.png);
+	@extend %image-container;
+}
+.image-container2 {
+	background-image: url(/assets/images/portfolio/keyboard.png);
+	@extend %image-container;
+}
+.image-container3 {
+	background-image: url(/assets/images/portfolio/work-media.png);
+	@extend %image-container;
+}
+
+.image-container4 {
+	background-image: url(/assets/images/portfolio/dddone.png);
+	@extend %image-container;
+}
+.image-container5 {
+	background-image: url(/assets/images/portfolio/abstract.png);
+	@extend %image-container;
+}
+.image-container6 {
+	background-image: url(/assets/images/portfolio/handp.png);
+	@extend %image-container;
+}
+.image-container7 {
+	background-image: url(/assets/images/portfolio/architect.png);
+	@extend %image-container;
+}
+.image-container8 {
+	background-image: url(/assets/images/portfolio/calc.png);
+	@extend %image-container;
+}
+.image-container9 {
+	background-image: url(/assets/images/portfolio/sport.png);
+	@extend %image-container;
+}
+.image-link {
+	text-decoration: none;
+	@extend %text-title;
+	color: $text-light;
+}
+.image-tag {
+	@extend %text-explanation;
+	width: fit-content;
+	background-color: #fff;
+	border-radius: 19px;
+	text-align: center;
+	padding: 1% 3%;
+}
+
+.button-container {
+	margin-top: 68px;
+	margin-bottom: 68px;
+}
+
+.aside {
+	display: flex;
+	background-color: $bg-color-light;
+}
+
+.aside-content {
+	width: 70%;
+	max-height: 40%;
+	margin: auto;
+	background-color: $bg-color-accent;
+	display: flex;
+	border-radius: 6px;
+	padding: 4%;
+	&__article {
+		flex-basis: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 44px;
+	}
+	&__title {
+		@extend %title-section;
+		color: $text-light;
+		width: 80%;
+	}
+	&__text {
+		@extend %text-explanation;
+		color: $text-light-gray;
+		width: 90%;
+	}
+	&__image {
+		flex-basis: 50%;
+		align-self: center;
+		justify-self: center;
+	}
+	&__img-item {
+		max-width: 100%;
+		max-height: 100%;
 	}
 }

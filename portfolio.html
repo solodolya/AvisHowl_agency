@@ -13,41 +13,151 @@
 		<title>Agency</title>
 	</head>
 	<body>
-		<header class="header">
-			<div class="header-navbar">
-				<div class="logo-box">
-					<div class="logo-box__img">
-						<img src="./assets/images/logo.svg" alt="Logo" />
+		<div class="wrapper">
+			<header class="header">
+				<div class="header-navbar">
+					<div class="logo-box">
+						<div class="logo-box__img">
+							<img src="./assets/images/logo.svg" alt="Logo" />
+						</div>
+						<span class="logo-box__text">Agency</span>
 					</div>
-					<span class="logo-box__text">Agency</span>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a class="nav__link" href="#">About</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="#">Services</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="#">Pricing</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="#">Blog</a>
+							</li>
+						</ul>
+					</nav>
+					<form class="form-button">
+						<button class="form-button__contact" type="button">
+							<a
+								class="form-button__link form-button__link--light"
+								href="#"
+								>Contact</a
+							>
+						</button>
+					</form>
 				</div>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item">
-							<a class="nav__link" href="#">About</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#">Services</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#">Pricing</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#">Blog</a>
-						</li>
-					</ul>
-				</nav>
-				<button class="header-btn">Contact</button>
-			</div>
-			<div class="header-content">
-				<h1 class="header-content__title">Portfolio</h1>
-				<p class="header-content__text">
-					Agency provides a full service range including technical
-					skills, design, business understanding.
-				</p>
-			</div>
-		</header>
-		<main></main>
-		<footer></footer>
+				<div class="header-content">
+					<h1 class="header-content__title">Portfolio</h1>
+					<p class="header-content__text">
+						Agency provides a full service range including technical
+						skills, design, business understanding.
+					</p>
+				</div>
+			</header>
+			<main class="main">
+				<div class="menu-filter">
+					<a
+						href="#"
+						class="menu-filter__link menu-filter__link--active"
+						>Show All<sup class="menu-filter__index">14</sup></a
+					>
+					<a href="#" class="menu-filter__link"
+						>Design<sup class="menu-filter__index">6</sup></a
+					>
+					<a href="#" class="menu-filter__link"
+						>Branding<sup class="menu-filter__index">4</sup></a
+					>
+					<a href="#" class="menu-filter__link"
+						>Illustration<sup class="menu-filter__index">3</sup></a
+					>
+					<a href="#" class="menu-filter__link"
+						>Motion<sup class="menu-filter__index">1</sup></a
+					>
+				</div>
+				<div class="gallery">
+					<div class="image-container1">
+						<span class="image-tag">Design</span>
+						<a class="image-link" href="#">SOFA</a>
+					</div>
+					<div class="image-container2">
+						<span class="image-tag">Branding</span>
+						<a class="image-link" href="#">KeyBoard</a>
+					</div>
+					<div class="image-container3">
+						<span class="image-tag">Illustration</span>
+						<a class="image-link" href="#">Work Media</a>
+					</div>
+					<div class="image-container4">
+						<span class="image-tag">Motion</span>
+						<a class="image-link" href="#">DDDone</a>
+					</div>
+					<div class="image-container5">
+						<span class="image-tag">Design</span>
+						<a class="image-link" href="#">Abstract</a>
+					</div>
+					<div class="image-container6">
+						<span class="image-tag">Branding</span>
+						<a class="image-link" href="#">HandP</a>
+					</div>
+					<div class="image-container7">
+						<span class="image-tag">Motion</span>
+						<a class="image-link" href="#">Architect</a>
+					</div>
+					<div class="image-container8">
+						<span class="image-tag">Design</span>
+						<a class="image-link" href="#">CalC</a>
+					</div>
+					<div class="image-container9">
+						<span class="image-tag">Branding</span>
+						<a class="image-link" href="#">Sport</a>
+					</div>
+				</div>
+				<form class="form-button button-container">
+					<button class="form-button__load">
+						<a
+							class="form-button__link form-button__link--dark"
+							href="#"
+							>Load more</a
+						>
+					</button>
+				</form>
+			</main>
+			<aside class="aside">
+				<div class="aside-content">
+					<div class="aside-content__article">
+						<h2 class="aside-content__title">
+							Help To Build Your Dream Project
+						</h2>
+						<p class="aside-content__text">
+							A digital agency is a business you hire to outsource
+							your digital marketing efforts, instead of handling
+							in-house.
+						</p>
+						<form class="form-button form-button--position-start">
+							<button
+								class="form-button__contact form-button__contact--light"
+								type="button"
+							>
+								<a
+									class="form-button__link form-button__link--dark"
+									href="#"
+									>Contact Now</a
+								>
+							</button>
+						</form>
+					</div>
+					<div class="aside-content__image">
+						<img
+							class="aside-content__img-item"
+							src="./assets/images/dream_project_pic.png"
+							alt="Dream Project Picture"
+						/>
+					</div>
+				</div>
+			</aside>
+			<footer class="footer"></footer>
+		</div>
 	</body>
 </html>

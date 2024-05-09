@@ -5,13 +5,91 @@
 }
 
 @mixin button {
+	width: 138px;
+	height: 48px;
+	@include font;
 	font-weight: 900;
 	font-size: 14px;
 	text-transform: uppercase;
+	color: $text-light;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 6px;
-	width: 138px;
-	height: 48px;
 	background-color: transparent;
-	color: #fff;
+}
+
+@mixin img-style {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+%text-logo {
+	@include font;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 133%;
+}
+
+%orange-subtitle {
+	@include font;
+	font-size: 16px;
+	line-height: 200%;
+	letter-spacing: 0.19em;
+	text-transform: uppercase;
+	color: $text-dark-accent;
+}
+
+%text-h1 {
+	@include font;
+	font-size: 72px;
+	font-weight: 800;
+	line-height: 111%;
+	letter-spacing: -0.03em;
+}
+
+%text-addition {
+	@include font;
+	font-size: 20px;
+	line-height: 160%;
+	color: $text-dark;
+}
+
+%text-title {
+	@include font;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 120%;
+	color: $text-dark;
+}
+
+%text-explanation {
+	@include font;
+	font-size: 16px;
+	line-height: 200%;
+	color: $text-dark-gray;
+}
+
+%title-section {
+	@include font;
+	font-weight: 800;
+	font-size: 56px;
+	line-height: 114%;
+	letter-spacing: -0.02em;
+	color: $text-dark;
+}
+
+%image-container {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-width: 370px;
+	min-height: 416px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	row-gap: 23px;
+	padding-left: 48px;
+	padding-bottom: 51px;
 }
