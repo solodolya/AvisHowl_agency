@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 @mixin font {
 	font-family: "Epilogue", sans-serif;
 	font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
@@ -21,7 +27,19 @@
 	img {
 		width: 100%;
 		height: 100%;
+	}
+}
+@mixin img-style-fit {
+	img {
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
+	}
+}
+
+@mixin hover-cursor {
+	&:hover {
+		cursor: pointer;
 	}
 }
 
@@ -78,6 +96,13 @@
 	line-height: 114%;
 	letter-spacing: -0.02em;
 	color: $text-dark;
+}
+
+%text-sign {
+	@include font;
+	font-size: 14px;
+	line-height: 171%;
+	color: $text-light-gray;
 }
 
 %image-container {

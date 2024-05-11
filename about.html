@@ -19,46 +19,70 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
-				<div class="header-navbar">
-					<div class="logo-box">
-						<div class="logo-box__img">
-							<img src="./assets/images/logo.svg" alt="Logo" />
+				<section class="header__navigation">
+					<div class="logo-container">
+						<div class="logo-container__icon">
+							<img
+								src="./assets/images/logo.svg"
+								alt="agency-logo"
+							/>
 						</div>
-						<span class="logo-box__text">Agency</span>
+						<p class="logo-container__name">Agency</p>
 					</div>
-					<nav class="nav">
-						<ul class="nav__list">
-							<li class="nav__item">
-								<a class="nav__link" href="#">About</a>
+					<nav class="menu-container">
+						<ul class="menu">
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">About</a>
 							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#">Services</a>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Services</a>
 							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#">Pricing</a>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Pricing</a>
 							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#">Blog</a>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Blog</a>
 							</li>
 						</ul>
 					</nav>
+					<div class="burger-menu">
+						<input
+							class="burger-menu__burger-checkbox"
+							id="burger-checkbox"
+							type="checkbox"
+						/>
+						<label
+							class="burger-menu__burger"
+							for="burger-checkbox"
+						>
+							<span></span>
+						</label>
+						<ul class="menu">
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">About</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Services</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Pricing</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Blog</a>
+							</li>
+						</ul>
+					</div>
 					<form class="form-button">
-						<button class="form-button__contact" type="button">
-							<a
-								class="form-button__link form-button__link--light"
-								href="#"
-								>Contact</a
-							>
-						</button>
+						<button class="form-button__contact">Contact</button>
 					</form>
-				</div>
-				<div class="header-content">
+				</section>
+				<section class="header-content">
 					<h1 class="header-content__title">About Us</h1>
 					<p class="header-content__text">
 						Agency provides a full service range including technical
 						skills, design, business understanding.
 					</p>
-				</div>
+				</section>
 			</header>
 			<main class="main">
 				<div class="main-block1">
@@ -82,7 +106,12 @@
 					</section>
 					<section class="gallery">
 						<div class="video-container">
-							<video class="video-item" controls playsinline>
+							<video
+								class="video-item"
+								controls
+								playsinline
+								poster="./assets/images/about/video-img.png"
+							>
 								<source
 									src="./assets/videos/video.mp4"
 									type="video/mp4"
@@ -176,23 +205,9 @@
 				<div class="main-block2">
 					<section class="team">
 						<span class="team-subtitle">Our Team</span>
-						<div class="position-container">
-							<h2 class="team-title">
-								Team of Designers and Developers
-							</h2>
-							<div class="arrow-menu">
-								<img
-									class="arrow-menu__img"
-									src="./assets/images/about/arrow-icon1.svg"
-									alt="arrow left"
-								/>
-								<img
-									class="arrow-menu__img"
-									src="./assets/images/about/arrow-icon2.svg"
-									alt="arrow right"
-								/>
-							</div>
-						</div>
+						<h2 class="team-title">
+							Team of Designers and Developers
+						</h2>
 						<div class="team-gallery">
 							<div class="team-gallery__member">
 								<div class="team-gallery__box">
@@ -253,13 +268,6 @@
 								>
 							</div>
 						</div>
-						<div class="pin-menu">
-							<img
-								class="pin-menu__img"
-								src="./assets/images/about/pins-icon.svg"
-								alt="pins menu"
-							/>
-						</div>
 					</section>
 					<section class="testimonials">
 						<span class="testimonials__subtitle">Testimonials</span>
@@ -270,28 +278,6 @@
 							id="carouselExampleDark"
 							class="carousel carousel-dark slide"
 						>
-							<div class="carousel-indicators">
-								<button
-									type="button"
-									data-bs-target="#carouselExampleDark"
-									data-bs-slide-to="0"
-									class="active"
-									aria-current="true"
-									aria-label="Slide 1"
-								></button>
-								<button
-									type="button"
-									data-bs-target="#carouselExampleDark"
-									data-bs-slide-to="1"
-									aria-label="Slide 2"
-								></button>
-								<button
-									type="button"
-									data-bs-target="#carouselExampleDark"
-									data-bs-slide-to="2"
-									aria-label="Slide 3"
-								></button>
-							</div>
 							<div class="carousel-inner">
 								<div
 									class="carousel-item active"
@@ -320,6 +306,28 @@
 										alt="Review image"
 									/>
 								</div>
+							</div>
+							<div class="carousel-indicators">
+								<button
+									type="button"
+									data-bs-target="#carouselExampleDark"
+									data-bs-slide-to="0"
+									class="active"
+									aria-current="true"
+									aria-label="Slide 1"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleDark"
+									data-bs-slide-to="1"
+									aria-label="Slide 2"
+								></button>
+								<button
+									type="button"
+									data-bs-target="#carouselExampleDark"
+									data-bs-slide-to="2"
+									aria-label="Slide 3"
+								></button>
 							</div>
 						</div>
 					</section>
@@ -578,25 +586,25 @@
 					<div class="footer-navbar__social">
 						<div class="social-item1">
 							<img
-								src="./assets/images/facebook.png"
+								src="./assets/images/facebook-logo.svg"
 								alt="Facebook logo"
 							/>
 						</div>
 						<div class="social-item2">
 							<img
-								src="./assets/images/twitter.png"
+								src="./assets/images/twitter-logo.svg"
 								alt="Twitter logo"
 							/>
 						</div>
 						<div class="social-item3">
 							<img
-								src="./assets/images/instagram.png"
+								src="./assets/images/instagram-logo.svg"
 								alt="Instagram logo"
 							/>
 						</div>
 					</div>
 				</nav>
-				<hr aria-hidden="true" />
+				<hr class="divider" aria-hidden="true" />
 				<div class="footer-end">
 					<div class="copyright">
 						<p class="copyright__text">

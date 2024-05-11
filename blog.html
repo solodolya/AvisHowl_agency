@@ -13,42 +13,58 @@
 		<title>Agency</title>
 	</head>
 	<body>
-		<header>
-			<nav>
-				<div class="header-navbar">
-					<img src="./assets/images/blog/logo.svg" alt="logo" />
+		<header class="header">
+			<section class="header__navigation">
+				<div class="logo-container">
+					<div class="logo-container__icon">
+						<img src="./assets/images/logo.svg" alt="agency-logo" />
+					</div>
+					<p class="logo-container__name">Agency</p>
 				</div>
-				<div class="header-navbar">
-					<ul class="navbar-menu">
-						<li class="menu-item">
-							<a class="menu-link" href="#">About</a>
+				<nav class="menu-container">
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">About</a>
 						</li>
-						<li class="menu-item">
-							<a class="menu-link" href="#">Services</a>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">Services</a>
 						</li>
-						<li class="menu-item">
-							<a class="menu-link" href="#">Pricing</a>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">Pricing</a>
 						</li>
-						<li class="menu-item">
-							<a class="menu-link" href="#">Blog</a>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">Blog</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="burger-menu">
+					<input
+						class="burger-menu__burger-checkbox"
+						id="burger-checkbox"
+						type="checkbox"
+					/>
+					<label class="burger-menu__burger" for="burger-checkbox">
+						<span></span>
+					</label>
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">About</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">Services</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">Pricing</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="#">Blog</a>
 						</li>
 					</ul>
 				</div>
-				<div>
-					<form class="navbar-menu__input" action="#" method="get">
-						<button class="navbar-menu__input-button" type="submit">
-							CONTACT
-						</button>
-					</form>
-				</div>
-			</nav>
-			<div class="header-end">
-				<h1>Blog Articles</h1>
-				<p class="text">
-					Agency provides a full service range including technical
-					skills, design, business understanding.
-				</p>
-			</div>
+				<form class="form-button">
+					<button class="form-button__contact">Contact</button>
+				</form>
+			</section>
 		</header>
 		<main>
 			<div class="blog-articles__major">
