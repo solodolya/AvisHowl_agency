@@ -2,103 +2,178 @@
 @import "../template";
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .wrapper {
 	display: flex;
 	flex-direction: column;
 }
 
 .header {
-	width: 100%;
-	min-height: 400px;
 	background-color: $bg-color-dark;
-	display: flex;
-	flex-direction: column;
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 80%;
+		margin: auto;
+		padding: 16px 0 104px;
+		@media screen and (max-width: 1023px) {
+			width: 85%;
+			padding-bottom: 50px;
+		}
+		@media screen and (max-width: 767px) {
+			width: 90%;
+			padding-bottom: 80px;
+		}
+	}
 }
 
-.header-navbar {
-	color: $text-light;
-	display: flex;
-	width: 80%;
-	margin: auto;
-	justify-content: space-between;
-	height: 48px;
-	padding-top: 16px;
-	box-sizing: content-box;
-}
-
-.logo-box {
+.logo-container {
 	display: flex;
 	align-items: center;
-	column-gap: 15px;
-	&__img {
+	column-gap: 14px;
+	&__icon {
+		width: 48px;
+		height: 48px;
+		@include img-style;
 	}
-	&__text {
+	&__name {
 		@extend %text-logo;
+		color: $text-light;
 	}
 }
 
-.nav {
-	@extend %text-explanation;
-
+.menu-container {
+	min-width: 50%;
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
 	&__item {
 	}
-	&__link {
-		color: $text-light;
+	&__item-link {
+		@extend %text-explanation;
 		text-decoration: none;
+		color: $text-light;
 	}
-	&__list {
-		display: flex;
-		flex-grow: 1;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		height: 100%;
-		width: 500px;
-		padding: 0;
-		column-gap: 20%;
+}
+
+.burger-menu {
+	display: none;
+	@media screen and (max-width: 767px) {
+		display: block;
+
+		&__burger-checkbox {
+			opacity: 0;
+		}
+		&__burger-checkbox:checked ~ &__burger > span {
+			width: 100%;
+			transform: rotate(45deg);
+		}
+		&__burger-checkbox:checked ~ &__burger > span::before {
+			top: 0;
+			width: 100%;
+			transform: rotate(0);
+		}
+		&__burger-checkbox:checked ~ &__burger > span::after {
+			top: 0;
+			width: 100%;
+			transform: rotate(90deg);
+		}
+		&__burger-checkbox:checked ~ .menu {
+			visibility: visible;
+			right: 0;
+		}
+		&__burger-checkbox:checked ~ .menu {
+			visibility: visible;
+			right: 0;
+		}
+		&__burger-checkbox:checked ~ &__burger {
+			border: none;
+		}
+		&__burger {
+			position: absolute;
+			top: 20px;
+			right: 5%;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			width: 48px;
+			height: 48px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			border-radius: 6px;
+			@include hover-cursor;
+			& > span,
+			& > span::before,
+			& > span::after {
+				position: absolute;
+				left: 16px;
+				display: block;
+				width: 16px;
+				height: 2px;
+				background-color: #d8d8d8;
+				border-radius: 1px;
+				transition-duration: 0.25s;
+			}
+
+			& > span::before {
+				content: "";
+				left: 0;
+				top: -8px;
+			}
+
+			& > span::after {
+				content: "";
+				left: 0;
+				top: 8px;
+			}
+		}
+		.menu {
+			position: fixed;
+			visibility: hidden;
+			top: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 300px;
+			margin: 0;
+			padding: 60px 0;
+			background-color: $bg-color-dark;
+			transition-duration: 0.25s;
+			margin-bottom: 0;
+			padding-left: 0;
+			&__item {
+				display: block;
+				padding: 12px 24px;
+				transition-duration: 0.25s;
+			}
+		}
 	}
 }
 
 .form-button {
 	align-self: center;
 
-	&--position-start {
-		align-self: flex-start;
-	}
 	&__contact {
 		@include button;
-		&--light {
-			background-color: #fff;
-			width: 154px;
-			box-shadow: 0 3px 9px 0 rgba(57, 20, 0, 0.08);
+		@include hover-cursor;
+
+		@media screen and (max-width: 1023px) {
+			display: none;
 		}
 	}
-	&__contact:hover {
-		cursor: pointer;
-	}
+
 	&__load {
 		@include button;
-		background-color: #fff;
+		@include hover-cursor;
 		width: 170px;
-		box-shadow: 0 3px 9px 0 rgba(57, 20, 0, 0.08);
-	}
-	&__load:hover {
-		cursor: pointer;
-	}
-	&__link {
-		text-decoration: none;
-		&--light {
-			color: $text-light;
-		}
-		&--dark {
-			color: $text-dark;
-		}
+		background-color: #fff;
+		color: $text-dark;
+		box-shadow: 0 3px 9px 0 $shadow-dark;
 	}
 }
 
@@ -108,73 +183,119 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	row-gap: 24px;
+	@media screen and (max-width: 767px) {
+		row-gap: 12px;
+	}
+	&__title {
+		@extend %text-h1;
+		color: $text-light;
+		margin: 0;
+		@media screen and (max-width: 767px) {
+			font-size: 56px;
+			line-height: 114%;
+		}
+	}
 	&__text {
 		@extend %text-explanation;
 		color: $text-light-gray;
 		width: 570px;
 		text-align: center;
-	}
-	&__title {
-		@extend %text-h1;
-		color: $text-light;
+		margin-bottom: 66px;
+		@media screen and (max-width: 767px) {
+			width: 329px;
+			margin-bottom: 87px;
+		}
 	}
 }
 
 .main {
-	flex-grow: 1;
-	background-color: $bg-color-light;
 	display: flex;
 	flex-direction: column;
+	flex-grow: 1;
+	background-color: $bg-color-light;
 }
 
 .gallery {
-	padding-top: 5%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 	justify-items: center;
-	margin: auto;
 	width: 80%;
+	margin: auto;
+	padding-top: 112px;
 	gap: 30px;
-}
-.image-container1 {
-	background-image: url(/assets/images/portfolio/sofa.png);
-	@extend %image-container;
-}
-.image-container2 {
-	background-image: url(/assets/images/portfolio/keyboard.png);
-	@extend %image-container;
-}
-.image-container3 {
-	background-image: url(/assets/images/portfolio/work-media.png);
-	@extend %image-container;
-}
 
-.image-container4 {
-	background-image: url(/assets/images/portfolio/dddone.png);
-	@extend %image-container;
-}
-.image-container5 {
-	background-image: url(/assets/images/portfolio/abstract.png);
-	@extend %image-container;
-}
-.image-container6 {
-	background-image: url(/assets/images/portfolio/handp.png);
-	@extend %image-container;
-}
-.image-container7 {
-	background-image: url(/assets/images/portfolio/architect.png);
-	@extend %image-container;
-}
-.image-container8 {
-	background-image: url(/assets/images/portfolio/calc.png);
-	@extend %image-container;
-}
-.image-container9 {
-	background-image: url(/assets/images/portfolio/sport.png);
-	@extend %image-container;
+	@media screen and (max-width: 1023px) {
+		width: 85%;
+	}
+	@media screen and (max-width: 767px) {
+		width: 90%;
+	}
+
+	.image-container1 {
+		background-image: url(/assets/images/portfolio/sofa.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container2 {
+		background-image: url(/assets/images/portfolio/keyboard.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container3 {
+		background-image: url(/assets/images/portfolio/work-media.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+
+	.image-container4 {
+		background-image: url(/assets/images/portfolio/dddone.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container5 {
+		background-image: url(/assets/images/portfolio/abstract.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container6 {
+		background-image: url(/assets/images/portfolio/handp.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container7 {
+		background-image: url(/assets/images/portfolio/architect.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container8 {
+		background-image: url(/assets/images/portfolio/calc.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
+	.image-container9 {
+		background-image: url(/assets/images/portfolio/sport.png);
+		@include image-container;
+		@media screen and (max-width: 767px) {
+			min-width: 329px;
+		}
+	}
 }
 .image-link {
 	text-decoration: none;
@@ -182,56 +303,17 @@
 	color: $text-light;
 }
 .image-tag {
-	@extend %text-explanation;
 	width: fit-content;
+	padding: 5px 16px;
+	@extend %text-explanation;
 	background-color: #fff;
 	border-radius: 19px;
 	text-align: center;
-	padding: 1% 3%;
 }
 
 .button-container {
-	margin-top: 68px;
-	margin-bottom: 68px;
-}
-
-.aside {
-	display: flex;
-	background-color: $bg-color-light;
-}
-
-.aside-content {
-	width: 70%;
-	max-height: 40%;
-	margin: auto;
-	background-color: $bg-color-accent;
-	display: flex;
-	border-radius: 6px;
-	padding: 4%;
-	&__article {
-		flex-basis: 50%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		row-gap: 44px;
-	}
-	&__title {
-		@extend %title-section;
-		color: $text-light;
-		width: 80%;
-	}
-	&__text {
-		@extend %text-explanation;
-		color: $text-light-gray;
-		width: 90%;
-	}
-	&__image {
-		flex-basis: 50%;
-		align-self: center;
-		justify-self: center;
-	}
-	&__img-item {
-		max-width: 100%;
-		max-height: 100%;
+	margin: 80px 0 112px 0;
+	@media screen and (max-width: 767px) {
+		margin: 48px 0 114px 0;
 	}
 }

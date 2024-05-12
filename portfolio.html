@@ -15,46 +15,70 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
-				<div class="header-navbar">
-					<div class="logo-box">
-						<div class="logo-box__img">
-							<img src="./assets/images/logo.svg" alt="Logo" />
+				<section class="header__navigation">
+					<div class="logo-container">
+						<div class="logo-container__icon">
+							<img
+								src="./assets/images/logo.svg"
+								alt="agency-logo"
+							/>
 						</div>
-						<span class="logo-box__text">Agency</span>
+						<p class="logo-container__name">Agency</p>
 					</div>
-					<nav class="nav">
-						<ul class="nav__list">
-							<li class="nav__item">
-								<a class="nav__link" href="#">About</a>
+					<nav class="menu-container">
+						<ul class="menu">
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">About</a>
 							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#">Services</a>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Services</a>
 							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#">Pricing</a>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Pricing</a>
 							</li>
-							<li class="nav__item">
-								<a class="nav__link" href="#">Blog</a>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Blog</a>
 							</li>
 						</ul>
 					</nav>
+					<div class="burger-menu">
+						<input
+							class="burger-menu__burger-checkbox"
+							id="burger-checkbox"
+							type="checkbox"
+						/>
+						<label
+							class="burger-menu__burger"
+							for="burger-checkbox"
+						>
+							<span></span>
+						</label>
+						<ul class="menu">
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">About</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Services</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Pricing</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__item-link" href="#">Blog</a>
+							</li>
+						</ul>
+					</div>
 					<form class="form-button">
-						<button class="form-button__contact" type="button">
-							<a
-								class="form-button__link form-button__link--light"
-								href="#"
-								>Contact</a
-							>
-						</button>
+						<button class="form-button__contact">Contact</button>
 					</form>
-				</div>
-				<div class="header-content">
+				</section>
+				<section class="header-content">
 					<h1 class="header-content__title">Portfolio</h1>
 					<p class="header-content__text">
 						Agency provides a full service range including technical
 						skills, design, business understanding.
 					</p>
-				</div>
+				</section>
 			</header>
 			<main class="main">
 				<div class="gallery">
@@ -96,49 +120,9 @@
 					</div>
 				</div>
 				<form class="form-button button-container">
-					<button class="form-button__load">
-						<a
-							class="form-button__link form-button__link--dark"
-							href="#"
-							>Load more</a
-						>
-					</button>
+					<button class="form-button__load">Load more</button>
 				</form>
 			</main>
-			<aside class="aside">
-				<div class="aside-content">
-					<div class="aside-content__article">
-						<h2 class="aside-content__title">
-							Help To Build Your Dream Project
-						</h2>
-						<p class="aside-content__text">
-							A digital agency is a business you hire to outsource
-							your digital marketing efforts, instead of handling
-							in-house.
-						</p>
-						<form class="form-button form-button--position-start">
-							<button
-								class="form-button__contact form-button__contact--light"
-								type="button"
-							>
-								<a
-									class="form-button__link form-button__link--dark"
-									href="#"
-									>Contact Now</a
-								>
-							</button>
-						</form>
-					</div>
-					<div class="aside-content__image">
-						<img
-							class="aside-content__img-item"
-							src="./assets/images/dream_project_pic.png"
-							alt="Dream Project Picture"
-						/>
-					</div>
-				</div>
-			</aside>
-			<footer class="footer"></footer>
 		</div>
 	</body>
 </html>
