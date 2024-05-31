@@ -60,6 +60,8 @@
 	background-color: $bg-color-light;
 }
 
+@include navigation-style;
+/*
 .header {
 	background-color: $bg-color-dark;
 
@@ -223,7 +225,7 @@
 		display: none;
 	}
 }
-
+*/
 .header-end {
 	margin: auto;
 	padding-bottom: 66px;
