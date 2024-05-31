@@ -7,6 +7,8 @@
 	flex-direction: column;
 }
 
+@include navigation-style;
+/*
 .header {
 	background-color: $bg-color-dark;
 	&__navigation {
@@ -153,19 +155,19 @@
 			}
 		}
 	}
-}
+}*/
 
 .form-button {
 	align-self: center;
 
-	&__contact {
+	/*&__contact {
 		@include button;
 		@include hover-cursor;
 
 		@media screen and (max-width: 1023px) {
 			display: none;
 		}
-	}
+	}*/
 
 	&__load {
 		@include button;
