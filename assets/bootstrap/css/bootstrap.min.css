@@ -5980,9 +5980,6 @@ fieldset:disabled .btn {
 .carousel-dark .carousel-control-prev-icon {
 	filter: invert(1) grayscale(100);
 }
-.carousel-dark .carousel-indicators [data-bs-target] {
-	background-color: #000;
-}
 .carousel-dark .carousel-caption {
 	color: #000;
 }
