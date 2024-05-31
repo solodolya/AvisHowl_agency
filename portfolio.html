@@ -1,237 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.svg"
-      type="image/svg+xml"
-    />
-    <link rel="stylesheet" href="./assets/styles/normalize.css" />
-    <link rel="stylesheet" href="./assets/styles/portfolio/portfolio.css" />
-    <title>Agency</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <section class="header__navigation">
-          <div class="logo-container">
-            <div class="logo-container__icon">
-              <img src="./assets/images/logo.svg" alt="agency-logo" />
-            </div>
-            <p class="logo-container__name">Agency</p>
-          </div>
-          <nav class="menu-container">
-            <ul class="menu">
-              <li class="menu__item">
-                <a class="menu__item-link" href="./main.html">Home</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="./about.html">About</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="./portfolio.html">Portfolio</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="./blog.html">Blog</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="burger-menu">
-            <input
-              class="burger-menu__burger-checkbox"
-              id="burger-checkbox"
-              type="checkbox"
-            />
-            <label class="burger-menu__burger" for="burger-checkbox">
-              <span></span>
-            </label>
-            <ul class="menu">
-              <li class="menu__item">
-                <a class="menu__item-link" href="./main.html">Home</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="./about.html">About</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="./portfolio.html">Portfolio</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__item-link" href="./blog.html">Blog</a>
-              </li>
-            </ul>
-          </div>
-          <button
-            class="header__button"
-            onclick="document.location='./main.html#contacts'"
-          >
-            Contact
-          </button>
-        </section>
-        <section class="header-content">
-          <h1 class="header-content__title">Portfolio</h1>
-          <p class="header-content__text">
-            Agency provides a full service range including technical skills,
-            design, business understanding.
-          </p>
-        </section>
-      </header>
-      <main class="main">
-        <div class="gallery">
-          <div class="image-container1">
-            <span class="image-tag">Design</span>
-            <a class="image-link" href="#">SOFA</a>
-          </div>
-          <div class="image-container2">
-            <span class="image-tag">Branding</span>
-            <a class="image-link" href="#">KeyBoard</a>
-          </div>
-          <div class="image-container3">
-            <span class="image-tag">Illustration</span>
-            <a class="image-link" href="#">Work Media</a>
-          </div>
-          <div class="image-container4">
-            <span class="image-tag">Motion</span>
-            <a class="image-link" href="#">DDDone</a>
-          </div>
-          <div class="image-container5">
-            <span class="image-tag">Design</span>
-            <a class="image-link" href="#">Abstract</a>
-          </div>
-          <div class="image-container6">
-            <span class="image-tag">Branding</span>
-            <a class="image-link" href="#">HandP</a>
-          </div>
-          <div class="image-container7">
-            <span class="image-tag">Motion</span>
-            <a class="image-link" href="#">Architect</a>
-          </div>
-          <div class="image-container8">
-            <span class="image-tag">Design</span>
-            <a class="image-link" href="#">CalC</a>
-          </div>
-          <div class="image-container9">
-            <span class="image-tag">Branding</span>
-            <a class="image-link" href="#">Sport</a>
-          </div>
-        </div>
-        <form class="form-button button-container">
-          <button class="form-button__load">Load more</button>
-        </form>
-      </main>
-      <aside class="aside">
-        <div class="aside-content">
-          <div class="aside-content__article">
-            <span class="aside-content__headline"
-              >Help To Build Your Dream Project</span
-            >
-            <p class="aside-content__text">
-              A digital agency is a business you hire to outsource your digital
-              marketing efforts, instead of handling in-house.
-            </p>
-            <form class="aside-content__input" action="#" method="get">
-              <button class="aside-content__button" type="button">
-                CONTACT NOW
-              </button>
-            </form>
-          </div>
-          <div class="aside-content__image">
-            <img
-              class="image-item"
-              src="./assets/images/blog/dream_project_pic.png"
-              alt="Dream-Project-Picture"
-            />
-          </div>
-        </div>
-      </aside>
-      <footer class="footer">
-        <nav class="footer-navbar">
-          <div class="footer-name">
-            <span class="footer-name__headline text-h4">Agency</span>
-          </div>
-          <div class="footer-navbar__menu">
-            <ul class="footer-navbar__menu-items">
-              <li>
-                <span class="text-h5">MENU</span>
-              </li>
-              <li>
-                <a class="menu-item" href="#">About</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#">Services</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#">Blog</a>
-              </li>
-              <li>
-                <a class="menu-item" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-navbar__service">
-            <ul class="footer-navbar__service-items">
-              <li>
-                <span class="text-h5">SERVICE</span>
-              </li>
-              <li>
-                <a class="service-item" href="#">Design</a>
-              </li>
-              <li>
-                <a class="service-item" href="#">Development</a>
-              </li>
-              <li>
-                <a class="service-item" href="#">Marketing</a>
-              </li>
-              <li>
-                <a class="service-item" href="#">See More</a>
-              </li>
-            </ul>
-          </div>
-          <div class="social">
-            <div class="social__item">
-              <a href="#">
-                <img
-                  src="./assets/images/facebook-logo.svg"
-                  alt="Facebook logo"
-                />
-              </a>
-            </div>
-            <div class="social__item">
-              <a href="#">
-                <img
-                  src="./assets/images/twitter-logo.svg"
-                  alt="Twitter logo"
-                />
-              </a>
-            </div>
-            <div class="social__item">
-              <a href="#">
-                <img
-                  src="./assets/images/instagram-logo.svg"
-                  alt="Instagram logo"
-                />
-              </a>
-            </div>
-          </div>
-        </nav>
-        <hr class="line" aria-hidden="true" />
-        <nav class="footer-end">
-          <div class="footer-end__rights">
-            <p>Copyright &copy; 2022 Laaqiq. All Rights Reserved.</p>
-          </div>
-          <div class="footer-end__navbar">
-            <ul class="nav">
-              <li class="nav__item">
-                <a class="nav__link" href="#">Terms of Use</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </footer>
-    </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="./assets/images/logo.svg"
+			type="image/svg+xml"
+		/>
+		<link rel="stylesheet" href="./assets/styles/normalize.css" />
+		<link rel="stylesheet" href="./assets/styles/portfolio/portfolio.css" />
+		<title>Agency</title>
+	</head>
+	<body>
+		<header class="header">
+			<section class="header__navigation">
+				<div class="logo-container">
+					<div class="logo-container__icon">
+						<img src="./assets/images/logo.svg" alt="agency-logo" />
+					</div>
+					<p class="logo-container__name">Agency</p>
+				</div>
+				<nav class="menu-container">
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="menu__item-link" href="./main.html"
+								>Home</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="./about.html"
+								>About</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="./portfolio.html"
+								>Portfolio</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="./blog.html"
+								>Blog</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<div class="burger-menu">
+					<input
+						class="burger-menu__burger-checkbox"
+						id="burger-checkbox"
+						type="checkbox"
+					/>
+					<label class="burger-menu__burger" for="burger-checkbox">
+						<span></span>
+					</label>
+					<ul class="menu">
+						<li class="menu__item">
+							<a class="menu__item-link" href="./main.html"
+								>Home</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="./about.html"
+								>About</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="./portfolio.html"
+								>Portfolio</a
+							>
+						</li>
+						<li class="menu__item">
+							<a class="menu__item-link" href="./blog.html"
+								>Blog</a
+							>
+						</li>
+					</ul>
+				</div>
+				<button
+					class="header__button"
+					onclick="document.location='./main.html#contacts'"
+				>
+					Contact
+				</button>
+			</section>
+			<section class="header-content">
+				<h1 class="header-content__title">Portfolio</h1>
+				<p class="header-content__text">
+					Agency provides a full service range including technical
+					skills, design, business understanding.
+				</p>
+			</section>
+		</header>
+		<main class="main">
+			<section class="portfolio">
+				<div class="portfolio__item portfolio__item--first">
+					<span class="portfolio__item-tag">Design</span>
+					<a class="portfolio__item-link" href="#">SOFA</a>
+				</div>
+				<div class="portfolio__item portfolio__item--second">
+					<span class="portfolio__item-tag">Branding</span>
+					<a class="portfolio__item-link" href="#">KeyBoard</a>
+				</div>
+				<div class="portfolio__item portfolio__item--third">
+					<span class="portfolio__item-tag">Illustration</span>
+					<a class="portfolio__item-link" href="#">Work Media</a>
+				</div>
+				<div class="portfolio__item portfolio__item--fourth">
+					<span class="portfolio__item-tag">Motion</span>
+					<a class="portfolio__item-link" href="#">DDDone</a>
+				</div>
+				<div class="portfolio__item portfolio__item--fifth">
+					<span class="portfolio__item-tag">Design</span>
+					<a class="portfolio__item-link" href="#">Abstract</a>
+				</div>
+				<div class="portfolio__item portfolio__item--sixth">
+					<span class="portfolio__item-tag">Branding</span>
+					<a class="portfolio__item-link" href="#">HandP</a>
+				</div>
+				<div class="portfolio__item portfolio__item--seventh">
+					<span class="portfolio__item-tag">Motion</span>
+					<a class="portfolio__item-link" href="#">Architect</a>
+				</div>
+				<div class="portfolio__item portfolio__item--eighth">
+					<span class="portfolio__item-tag">Design</span>
+					<a class="portfolio__item-link" href="#">CalC</a>
+				</div>
+				<div class="portfolio__item portfolio__item--ninth">
+					<span class="portfolio__item-tag">Branding</span>
+					<a class="portfolio__item-link" href="#">Sport</a>
+				</div>
+			</section>
+		</main>
+		<aside class="aside">
+			<div class="aside-content">
+				<div class="aside-content__article">
+					<span class="aside-content__headline"
+						>Help To Build Your Dream Project</span
+					>
+					<p class="aside-content__text">
+						A digital agency is a business you hire to outsource
+						your digital marketing efforts, instead of handling
+						in-house.
+					</p>
+					<form class="aside-content__input" action="#" method="get">
+						<button class="aside-content__button" type="button">
+							CONTACT NOW
+						</button>
+					</form>
+				</div>
+				<div class="aside-content__image">
+					<img
+						class="image-item"
+						src="./assets/images/blog/dream_project_pic.png"
+						alt="Dream-Project-Picture"
+					/>
+				</div>
+			</div>
+		</aside>
+		<footer class="footer">
+			<nav class="footer-navbar">
+				<div class="footer-name">
+					<span class="footer-name__headline text-h4">Agency</span>
+				</div>
+				<div class="footer-navbar__menu">
+					<ul class="footer-navbar__menu-items">
+						<li>
+							<span class="text-h5">MENU</span>
+						</li>
+						<li>
+							<a class="menu-item" href="#">About</a>
+						</li>
+						<li>
+							<a class="menu-item" href="#">Services</a>
+						</li>
+						<li>
+							<a class="menu-item" href="#">Blog</a>
+						</li>
+						<li>
+							<a class="menu-item" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-navbar__service">
+					<ul class="footer-navbar__service-items">
+						<li>
+							<span class="text-h5">SERVICE</span>
+						</li>
+						<li>
+							<a class="service-item" href="#">Design</a>
+						</li>
+						<li>
+							<a class="service-item" href="#">Development</a>
+						</li>
+						<li>
+							<a class="service-item" href="#">Marketing</a>
+						</li>
+						<li>
+							<a class="service-item" href="#">See More</a>
+						</li>
+					</ul>
+				</div>
+				<div class="social">
+					<div class="social__item">
+						<a href="#">
+							<img
+								src="./assets/images/facebook-logo.svg"
+								alt="Facebook logo"
+							/>
+						</a>
+					</div>
+					<div class="social__item">
+						<a href="#">
+							<img
+								src="./assets/images/twitter-logo.svg"
+								alt="Twitter logo"
+							/>
+						</a>
+					</div>
+					<div class="social__item">
+						<a href="#">
+							<img
+								src="./assets/images/instagram-logo.svg"
+								alt="Instagram logo"
+							/>
+						</a>
+					</div>
+				</div>
+			</nav>
+			<hr class="line" aria-hidden="true" />
+			<nav class="footer-end">
+				<div class="footer-end__rights">
+					<p>Copyright &copy; 2022 Laaqiq. All Rights Reserved.</p>
+				</div>
+				<div class="footer-end__navbar">
+					<ul class="nav">
+						<li class="nav__item">
+							<a class="nav__link" href="#">Terms of Use</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">Privacy Policy</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</footer>
+	</body>
 </html>
