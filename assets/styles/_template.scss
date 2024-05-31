@@ -221,3 +221,153 @@
 	line-height: 171%;
 	color: $text-light-gray;
 }
+
+@mixin navigation-style {
+	.header {
+		background-color: $bg-color-dark;
+		&__navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			margin: auto;
+			padding: 16px 0 104px;
+			@media (max-width: $tablet) {
+				width: 85%;
+				padding-bottom: 50px;
+			}
+			@media (max-width: $mobile) {
+				width: 90%;
+				padding-bottom: 80px;
+			}
+		}
+		&__button {
+			@include button;
+			@include hover-cursor;
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+
+	.logo-container {
+		display: flex;
+		align-items: center;
+		column-gap: 14px;
+		&__icon {
+			width: 48px;
+			height: 48px;
+			@include img-style;
+		}
+		&__name {
+			@include text-logo;
+			color: $text-light;
+		}
+	}
+
+	.menu-container {
+		min-width: 50%;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	.menu {
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		&__item-link {
+			@include text-explanation;
+			text-decoration: none;
+			color: $text-light;
+		}
+	}
+
+	.burger-menu {
+		display: none;
+		@media (max-width: $mobile) {
+			display: block;
+			&__burger-checkbox {
+				opacity: 0;
+			}
+			&__burger-checkbox:checked ~ &__burger > span {
+				width: 100%;
+				transform: rotate(45deg);
+			}
+			&__burger-checkbox:checked ~ &__burger > span::before {
+				top: 0;
+				width: 100%;
+				transform: rotate(0);
+			}
+			&__burger-checkbox:checked ~ &__burger > span::after {
+				top: 0;
+				width: 100%;
+				transform: rotate(90deg);
+			}
+			&__burger-checkbox:checked ~ .menu {
+				visibility: visible;
+				right: 0;
+			}
+			&__burger-checkbox:checked ~ .menu {
+				visibility: visible;
+				right: 0;
+			}
+			&__burger-checkbox:checked ~ &__burger {
+				border: none;
+			}
+			&__burger {
+				position: absolute;
+				top: 20px;
+				right: 5%;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				width: 48px;
+				height: 48px;
+				border: 1px solid $border-light;
+				border-radius: 6px;
+				@include hover-cursor;
+				& > span,
+				& > span::before,
+				& > span::after {
+					position: absolute;
+					left: 16px;
+					display: block;
+					width: 16px;
+					height: 2px;
+					background-color: $bg-burger;
+					border-radius: 1px;
+					transition-duration: 0.25s;
+				}
+				& > span::before {
+					content: "";
+					left: 0;
+					top: -8px;
+				}
+				& > span::after {
+					content: "";
+					left: 0;
+					top: 8px;
+				}
+			}
+			.menu {
+				position: fixed;
+				visibility: hidden;
+				top: 0;
+				right: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 300px;
+				margin-bottom: 60px;
+				padding-top: 60px;
+				background-color: $bg-color-dark;
+				transition-duration: 0.25s;
+				&__item {
+					display: block;
+					transition-duration: 0.25s;
+				}
+			}
+		}
+	}
+}
