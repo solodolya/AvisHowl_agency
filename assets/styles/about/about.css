@@ -3,77 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
   text-decoration: none;
+}
+
+ul {
   list-style-type: none;
-}
-
-.faq .accordion-item .accordion-header .accordion-button, .faq .accordion-item .accordion-header, .team-member__name, .card-info__title, .logo-container__name {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 133%;
-}
-
-.faq__subtitle, .testimonials__subtitle, .team__subtitle, .info-features__subtitle, .about__subtitle {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 200%;
-  letter-spacing: 0.19em;
-  text-transform: uppercase;
-  color: #ef6d58;
-}
-
-.header-content__title {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 72px;
-  font-weight: 800;
-  line-height: 111%;
-  letter-spacing: -0.03em;
-}
-
-.number-info__text, .info-features__title {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 160%;
-  color: #391400;
-}
-
-.faq__title, .number-info__number {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 120%;
-  color: #391400;
-}
-
-.faq .accordion-item .accordion-body, .faq__text, .team-member__position, .card-info__text, .info-features__text, .about__text, .header-content__text, .menu__item-link {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 200%;
-  color: rgba(57, 20, 0, 0.64);
-}
-
-.testimonials__title, .team__title, .about__title {
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 56px;
-  line-height: 114%;
-  letter-spacing: -0.02em;
-  color: #391400;
 }
 
 .header {
@@ -103,7 +40,7 @@
   width: 138px;
   height: 48px;
   font-family: "Epilogue", sans-serif;
-  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-weight: 400;
   font-style: normal;
   font-weight: 900;
   font-size: 14px;
@@ -138,7 +75,7 @@
 }
 .logo-container__name {
   font-family: "Epilogue", sans-serif;
-  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-weight: 400;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -162,7 +99,7 @@
 }
 .menu__item-link {
   font-family: "Epilogue", sans-serif;
-  font-weight: 400; /* 400 (Regular), 700 (Bold), 800 (ExtraBold), 900 (Black) */
+  font-weight: 400;
   font-style: normal;
   font-size: 16px;
   line-height: 200%;
@@ -215,7 +152,7 @@
     align-items: center;
     width: 48px;
     height: 48px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3019607843);
     border-radius: 6px;
   }
   .burger-menu__burger:hover {
@@ -261,187 +198,6 @@
   }
 }
 
-/*
-.header {
-	background-color: $bg-color-dark;
-	&__navigation {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 80%;
-		margin: auto;
-		padding: 16px 0 104px;
-		@media screen and (max-width: 1023px) {
-			width: 85%;
-			padding-bottom: 50px;
-		}
-		@media screen and (max-width: 767px) {
-			width: 90%;
-			padding-bottom: 80px;
-		}
-	}
-}
-
-.logo-container {
-	display: flex;
-	align-items: center;
-	column-gap: 14px;
-	&__icon {
-		width: 48px;
-		height: 48px;
-		@include img-style;
-	}
-	&__name {
-		@extend %text-logo;
-		color: $text-light;
-	}
-}
-
-.menu-container {
-	min-width: 50%;
-	@media screen and (max-width: 767px) {
-		display: none;
-	}
-}
-.menu {
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
-	&__item {
-	}
-	&__item-link {
-		@extend %text-explanation;
-		text-decoration: none;
-		color: $text-light;
-	}
-}
-
-.burger-menu {
-	display: none;
-	@media screen and (max-width: 767px) {
-		display: block;
-
-		&__burger-checkbox {
-			opacity: 0;
-		}
-		&__burger-checkbox:checked ~ &__burger > span {
-			width: 100%;
-			transform: rotate(45deg);
-		}
-		&__burger-checkbox:checked ~ &__burger > span::before {
-			top: 0;
-			width: 100%;
-			transform: rotate(0);
-		}
-		&__burger-checkbox:checked ~ &__burger > span::after {
-			top: 0;
-			width: 100%;
-			transform: rotate(90deg);
-		}
-		&__burger-checkbox:checked ~ .menu {
-			visibility: visible;
-			right: 0;
-		}
-		&__burger-checkbox:checked ~ .menu {
-			visibility: visible;
-			right: 0;
-		}
-		&__burger-checkbox:checked ~ &__burger {
-			border: none;
-		}
-		&__burger {
-			position: absolute;
-			top: 20px;
-			right: 5%;
-			z-index: 1;
-			display: flex;
-			align-items: center;
-			width: 48px;
-			height: 48px;
-			border: 1px solid rgba(255, 255, 255, 0.3);
-			border-radius: 6px;
-			@include hover-cursor;
-			& > span,
-			& > span::before,
-			& > span::after {
-				position: absolute;
-				left: 16px;
-				display: block;
-				width: 16px;
-				height: 2px;
-				background-color: #d8d8d8;
-				border-radius: 1px;
-				transition-duration: 0.25s;
-			}
-
-			& > span::before {
-				content: "";
-				left: 0;
-				top: -8px;
-			}
-
-			& > span::after {
-				content: "";
-				left: 0;
-				top: 8px;
-			}
-		}
-		.menu {
-			position: fixed;
-			visibility: hidden;
-			top: 0;
-			right: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 300px;
-			margin: 0;
-			padding: 60px 0;
-			background-color: $bg-color-dark;
-			transition-duration: 0.25s;
-			margin-bottom: 0;
-			padding-left: 0;
-			&__item {
-				display: block;
-				padding: 12px 24px;
-				transition-duration: 0.25s;
-			}
-		}
-	}
-}*/
-.form-button {
-  align-self: center;
-  /*&__contact {
-  	@include button;
-  	@include hover-cursor;
-
-  	@media screen and (max-width: 1023px) {
-  		display: none;
-  	}
-  }*/
-}
-.form-button__load {
-  width: 138px;
-  height: 48px;
-  font-family: "Epilogue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
-  background-color: transparent;
-  width: 170px;
-  background-color: #fff;
-  color: #391400;
-  box-shadow: 0 3px 9px 0 rgba(57, 20, 0, 0.08);
-}
-.form-button__load:hover {
-  cursor: pointer;
-}
-
 .header-content {
   flex-grow: 1;
   display: flex;
@@ -450,28 +206,41 @@
   align-items: center;
   row-gap: 24px;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header-content {
     row-gap: 12px;
   }
 }
 .header-content__title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 111%;
+  letter-spacing: -0.03em;
   color: #ffffff;
   margin: 0;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header-content__title {
     font-size: 56px;
     line-height: 114%;
   }
 }
 .header-content__text {
-  color: rgba(255, 255, 255, 0.64);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6392156863);
   width: 570px;
   text-align: center;
   margin-bottom: 66px;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header-content__text {
     width: 329px;
     margin-bottom: 87px;
@@ -514,10 +283,26 @@
   }
 }
 .about__subtitle {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: #ef6d58;
   grid-row: 1/2;
   grid-column: 1/2;
 }
 .about__title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 114%;
+  letter-spacing: -0.02em;
+  color: #391400;
   width: 417px;
   grid-row: 2/3;
   grid-column: 1/2;
@@ -533,6 +318,13 @@
   }
 }
 .about__text {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(57, 20, 0, 0.6392156863);
   width: 100%;
   padding-left: 15px;
 }
@@ -551,7 +343,7 @@
   grid-column: 2/3;
   margin-bottom: 0;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .about__text--second {
     padding: 0;
   }
@@ -668,6 +460,14 @@
   }
 }
 .info-features__subtitle {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: #ef6d58;
   margin-bottom: 18px;
 }
 @media (max-width: 767px) {
@@ -675,6 +475,24 @@
     margin-bottom: 14px;
   }
 }
+.info-features__title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 160%;
+  color: #391400;
+}
+.info-features__text {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(57, 20, 0, 0.6392156863);
+}
+
 .card-info {
   display: flex;
   align-items: flex-end;
@@ -734,6 +552,7 @@
     justify-content: flex-end;
     padding-top: 105px;
     min-height: 100%;
+    border: 1px solid #f3d1bf;
   }
 }
 .card-info__image {
@@ -751,14 +570,29 @@
   }
 }
 .card-info__title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
   color: #391400;
 }
+.card-info__text {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(57, 20, 0, 0.6392156863);
+}
+
 .number-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   margin: 144px 0 128px;
-  border: 1px solid #f3d1bf;
   border-radius: 6px;
   max-height: 30%;
 }
@@ -788,8 +622,11 @@
   height: 100%;
   width: 100%;
   padding: 50px;
-  border-right: 1px solid #f3d1bf;
+  border: 1px solid #f3d1bf;
   row-gap: 10px;
+}
+.number-info__box--borderless {
+  border-left: transparent;
 }
 @media screen and (max-width: 1439px) {
   .number-info__box {
@@ -802,14 +639,32 @@
     align-items: flex-start;
     padding: 47px;
   }
+  .number-info__box--borderless {
+    border-top: transparent;
+    border-left: 1px solid #f3d1bf;
+  }
+}
+.number-info__number {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  color: #391400;
 }
 @media (max-width: 1439px) {
   .number-info__number {
     font-size: 35px;
   }
 }
-.number-info #border-none {
-  border-right: transparent;
+.number-info__text {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 160%;
+  color: #391400;
 }
 
 .team {
@@ -830,8 +685,26 @@
     width: 90%;
   }
 }
+.team__subtitle {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: #ef6d58;
+}
 .team__title {
   width: 50%;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 114%;
+  letter-spacing: -0.02em;
+  color: #391400;
   color: #ffffff;
 }
 @media (max-width: 1023px) {
@@ -885,6 +758,12 @@
 }
 .team-member__name {
   padding-top: 25px;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
   color: #ffffff;
 }
 @media (max-width: 1439px) {
@@ -893,7 +772,13 @@
   }
 }
 .team-member__position {
-  color: rgba(255, 255, 255, 0.64);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6392156863);
 }
 @media (max-width: 1439px) {
   .team-member__position {
@@ -921,8 +806,26 @@
     margin: auto;
   }
 }
+.testimonials__subtitle {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: #ef6d58;
+}
 .testimonials__title {
-  color: #fff;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 114%;
+  letter-spacing: -0.02em;
+  color: #391400;
+  color: #ffffff;
   margin-bottom: 44px;
   max-width: 394px;
   text-align: center;
@@ -975,7 +878,7 @@
   background-color: transparent;
   border: 1px solid #4e4f6e;
 }
-@media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .carousel .carousel-indicators button {
     width: 7px;
     height: 7px;
@@ -1003,7 +906,24 @@
     width: 90%;
   }
 }
+.faq__subtitle {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: #ef6d58;
+}
 .faq__title {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  color: #391400;
   color: #ffffff;
 }
 .faq__contact {
@@ -1022,10 +942,17 @@
     font-size: 16px;
     line-height: 200%;
     color: #ffffff;
+    color: #ffffff;
   }
 }
 .faq__text {
-  color: rgba(255, 255, 255, 0.64);
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6392156863);
 }
 .faq .accordion-item {
   width: 100%;
@@ -1034,9 +961,21 @@
   border: 1px solid #3a3c56;
 }
 .faq .accordion-item .accordion-header {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
   background-color: transparent;
 }
 .faq .accordion-item .accordion-header .accordion-button {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
   outline: none;
   padding: 50px;
   box-shadow: none;
@@ -1061,12 +1000,19 @@
   height: auto;
   background-image: none;
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .faq .accordion-item .accordion-header .accordion-button::after {
     margin-left: 30px;
   }
 }
 .faq .accordion-item .accordion-body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #ffffff;
+  color: rgba(57, 20, 0, 0.6392156863);
   background-color: #fff;
   padding: 0 50px 50px 50px;
 }
@@ -1194,7 +1140,7 @@
   font-family: "Epilogue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgba(255, 255, 255, 0.64);
+  color: rgba(255, 255, 255, 0.6392156863);
   font-size: 16px;
   line-height: 32px;
   letter-spacing: 0px;
@@ -1399,7 +1345,7 @@
   font-family: "Epilogue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgba(57, 20, 0, 0.64);
+  color: rgba(57, 20, 0, 0.6392156863);
   font-size: 16px;
   line-height: 32px;
   letter-spacing: 0px;
@@ -1502,7 +1448,7 @@
   margin: auto;
   width: 80%;
   height: 1px;
-  background-color: rgb(243, 209, 191);
+  background-color: #f3d1bf;
   border: none;
 }
 @media screen and (max-width: 1023px) {

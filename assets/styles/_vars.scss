@@ -3,17 +3,18 @@ $bg-color-dark: #28293e;
 $bg-color-accent: #ef6d58;
 $text-dark: #391400;
 $text-dark-accent: #ef6d58;
-$text-dark-gray: rgba(57, 20, 0, 0.64);
+$text-dark-gray: #391400a3;
 $text-light: #ffffff;
-$text-light-gray: rgba(255, 255, 255, 0.64);
+$text-light-gray: #ffffffa3;
 $orange-light: #f3d1bf;
-$shadow-dark: rgba(57, 20, 0, 0.08);
-$shadow-light: rgba(57, 20, 0, 0.04);
-$border-dark: #3a3c56;
-$border-light: rgba(255, 255, 255, 0.3);
-$line-color: rgb(243, 209, 191);
 
+$shadow-dark: #39140014;
+$shadow-light: #3914000a;
+$border-dark: #3a3c56;
+$border-light: #ffffff4d;
+$line-color: #f3d1bf;
 $bg-burger: #d8d8d8;
+
 $desktop-md: 1439px;
 $tablet: 1023px;
 $mobile: 767px;
