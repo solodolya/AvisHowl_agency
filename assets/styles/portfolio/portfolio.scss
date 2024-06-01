@@ -143,8 +143,7 @@
 	}
 	.aside-content {
 		display: grid;
-		grid-template-areas: 
-		"article image";
+		grid-template-areas: "article image";
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
 		justify-content: stretch;
@@ -256,10 +255,10 @@
 		}
 		@media (max-width: $mobile) {
 			grid-template-areas:
-			"footer-name"
-			"footer-navbar__menu"
-			"footer-navbar__service"
-			"footer-navbar__social";
+				"footer-name"
+				"footer-navbar__menu"
+				"footer-navbar__service"
+				"footer-navbar__social";
 			grid-template-columns: 1fr;
 			grid-template-rows: 0.3fr repeat(2, 1fr) 0.3fr;
 			gap: 48px;
@@ -325,16 +324,16 @@
 				justify-content: center;
 				width: 50px;
 				height: 50px;
-				background-image: url(/assets/images/oval.svg);
+				background-image: url("../../images/oval.svg");
 				background-size: 100%;
 				background-position: center;
+				@include hover-cursor;
 			}
 		}
 	}
 	.footer-end {
 		display: grid;
-		grid-template-areas: 
-		"footer-end__rights footer-end__navbar";
+		grid-template-areas: "footer-end__rights footer-end__navbar";
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 1fr;
 		width: 80%;
@@ -343,10 +342,10 @@
 		@media (max-width: $tablet) {
 			width: 85%;
 		}
-		@media (max-width: $mobile) {	
+		@media (max-width: $mobile) {
 			grid-template-areas:
-			"footer-end__rights"
-			"footer-end__navbar";
+				"footer-end__rights"
+				"footer-end__navbar";
 			grid-template-columns: 1fr;
 			justify-content: stretch;
 			width: 90%;

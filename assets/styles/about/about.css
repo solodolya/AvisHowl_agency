@@ -938,7 +938,7 @@ ul {
     display: block;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .faq__link {
     font-family: "Epilogue", sans-serif;
     font-weight: 400;
@@ -988,6 +988,9 @@ ul {
   outline: none;
   box-shadow: none;
 }
+.faq .accordion-item .accordion-header .accordion-button {
+  justify-content: space-between;
+}
 .faq .accordion-item .accordion-header .accordion-button:not(collapsed) {
   background-color: #fff;
   color: #391400;
@@ -999,7 +1002,7 @@ ul {
   box-shadow: none;
 }
 .faq .accordion-item .accordion-header .accordion-button::after {
-  content: url(/assets/images/about/down-icon.svg);
+  content: url("../../images/about/down-icon.svg");
   width: auto;
   height: auto;
   background-image: none;
@@ -1307,9 +1310,12 @@ ul {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/images/oval.svg);
+  background-image: url("../../images/oval.svg");
   background-size: 100%;
   background-position: center;
+}
+.footer .footer-navbar .social__item:hover {
+  cursor: pointer;
 }
 .footer .footer-end {
   display: grid;
