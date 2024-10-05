@@ -7,4 +7,4 @@ Technologies
 Stack: HTML, CSS, SCSS, Bootstrap. 
 Libs: Bootstrap, normalize.css.
 
-Demo-page: https://solodolya.github.io/AvisHowl_agency/
+Demo-page: https://solodolya.github.io/AvisHowl_agency/about.html
